@@ -12,7 +12,9 @@ export default function (eleventyConfig) {
     "node_modules/@fontsource-variable/figtree/files/figtree-latin-wght-italic.woff2": "assets/figtree-italic.woff2",
     "node_modules/@fontsource-variable/figtree/LICENSE": "assets/figtree-license.txt"
   });
-  eleventyConfig.addGlobalData("pagesOrigin", process.env.PAGES_ORIGIN || "");
+  const pagesOrigin = process.env.PAGES_ORIGIN || "";
+  eleventyConfig.addGlobalData("pagesOrigin", pagesOrigin);
+  eleventyConfig.addGlobalData("pagesHostname", pagesOrigin ? new URL(pagesOrigin).hostname : "");
   eleventyConfig.setNunjucksEnvironmentOptions({ autoescape: true });
 
   eleventyConfig.addCollection("posts", (collection) =>

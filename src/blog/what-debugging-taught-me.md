@@ -8,4 +8,6 @@ Some weeks at IIT Bombay felt like one long debugging session. A build would bre
 
 I got more comfortable with the stretches where I didn’t know what was wrong. That has been useful at Sipwise. When something breaks, I can focus on what to try next without needing the whole answer upfront.
 
+When a problem drags on, I find it useful to come back to the smallest thing I can verify. Can I make the failure happen again? What is one condition I can change? It gives me a way to keep moving through the period where progress is hard to see. That was one of the habits I carried from the terminal window into building Sipwise.
+
 *Adapted from [my LinkedIn post on debugging and resilience](https://www.linkedin.com/posts/pavan-kale-548871185_iitbombay-resilience-startupmindset-activity-7363496285095493635-mqmm).*

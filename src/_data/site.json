@@ -2,6 +2,7 @@
   "name": "Pavan Kale",
   "description": "Pavan Kale’s personal website and blog.",
   "portrait": "/assets/portrait.png",
+  "umamiWebsiteId": "",
   "links": [
     { "label": "LinkedIn", "url": "https://in.linkedin.com/in/kalepavan" },
     { "label": "Instagram", "url": "https://www.instagram.com/wisemansips/" }

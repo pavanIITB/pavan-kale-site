@@ -5,6 +5,7 @@ A static personal site with a homepage, blog and Topmate booking page. Eleventy 
 ## Update the site
 
 - Edit the homepage bio in [src/index.md](src/index.md).
+- Set `videoUrl` and `videoTitle` in the homepage front matter to change the embedded YouTube video.
 - Edit your social links, Topmate links and links to posts published elsewhere in [src/_data/site.json](src/_data/site.json).
 - Replace [src/assets/portrait.png](src/assets/portrait.png) to update the site portrait, favicon, and link preview image.
 
@@ -51,6 +52,12 @@ At the registrar or DNS provider, add these records for the site. Preserve unrel
 | `www` | `CNAME` | `pavaniitb.github.io` |
 
 After GitHub’s DNS check passes, select **Enforce HTTPS** and check both the apex domain and `www`. [GitHub’s custom-domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+
+## Analytics
+
+The site can send page views to an [Umami Cloud](https://cloud.umami.is/) website. Create the website in your account using `pavaniitb.github.io` as the domain. Copy its website ID from **Tracking code** into `umamiWebsiteId` in [src/_data/site.json](src/_data/site.json). GitHub Pages includes the tracker after the next deployment.
+
+Sign in to Umami and open the website overview to see visitors, views by page, and traffic charts. Open **Insights → UTM** for campaign tags. Leave Share URLs disabled to keep the reports private.
 
 ## Illustrative homepage photos
 

@@ -20,16 +20,17 @@ layout: base.njk
     height="315"
     loading="lazy"
     referrerpolicy="strict-origin-when-cross-origin"
-    allow="encrypted-media; picture-in-picture; fullscreen"
+    allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
     allowfullscreen>
   </iframe>
+  <a class="video-source" href="{{ videoEmbed | replace('https://www.youtube-nocookie.com/embed/', 'https://www.youtube.com/watch?v=') }}">Watch on YouTube</a>
   {% endif %}
   {{ content | safe }}
 </div>
 
 <section class="page-section" id="writing" aria-labelledby="blog">
-  <h2 id="blog">Blog</h2>
-  {% set posts = collections.posts.slice(0, 3) %}
+  <h2 id="blog"><a href="{{ '/blog/' | url }}">Blog</a></h2>
+  {% set posts = collections.posts %}
   {% if posts.length %}
     {% include "post-list.njk" %}
   {% elif site.linkedPosts.length %}
@@ -37,5 +38,4 @@ layout: base.njk
   {% else %}
     <p class="muted">There are no published posts yet.</p>
   {% endif %}
-  <a class="text-link archive-link" href="{{ '/blog/' | url }}">View all posts</a>
 </section>

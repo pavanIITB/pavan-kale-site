@@ -18,8 +18,16 @@
   <meta property="og:image:alt" content="{{ site.name }}">
   <meta name="twitter:card" content="summary">
   {% endif %}
-  <link rel="stylesheet" href="{{ '/assets/site.css' | url }}?v=5">
+  <link rel="stylesheet" href="{{ '/assets/site.css' | url }}?v=6">
   <link rel="stylesheet" href="{{ '/assets/palette.css' | url }}">
+  {% if site.umamiWebsiteId and pagesHostname %}
+  <script defer
+    src="https://cloud.umami.is/script.js"
+    data-website-id="{{ site.umamiWebsiteId }}"
+    data-domains="{{ pagesHostname }}"
+    data-do-not-track="true"
+    data-exclude-hash="true"></script>
+  {% endif %}
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>

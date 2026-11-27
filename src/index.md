@@ -2,6 +2,8 @@
 layout: home.njk
 description: Pavan Kale, founder of Sipwise. From building robots at IIT Bombay to shipping smart bottles.
 intro: I’m the founder and CEO of Sipwise. We build smart bottles that remind people to drink water.
+videoUrl: https://www.youtube.com/watch?v=xttrkgKXtZ4
+videoTitle: The Last Repair Shop
 ---
 
 ## IIT Bombay

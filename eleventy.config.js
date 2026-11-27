@@ -25,6 +25,23 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (value) => readableDate.format(value));
   eleventyConfig.addFilter("isoDate", (value) => value.toISOString().slice(0, 10));
 
+  eleventyConfig.addFilter("youtubeEmbedUrl", (value) => {
+    if (!value || !URL.canParse(value)) return "";
+
+    const url = new URL(value);
+    const host = url.hostname.replace(/^www\./, "");
+    if (url.protocol !== "https:") return "";
+
+    let id;
+    if (host === "youtu.be") {
+      id = url.pathname.slice(1);
+    } else if (["youtube.com", "m.youtube.com", "youtube-nocookie.com"].includes(host)) {
+      id = url.searchParams.get("v") || url.pathname.match(/^\/embed\/([^/]+)$/)?.[1];
+    }
+
+    return id && /^[\w-]{11}$/.test(id) ? `https://www.youtube-nocookie.com/embed/${id}` : "";
+  });
+
   return {
     dir: { input: "src", output: "dist" },
     markdownTemplateEngine: false,

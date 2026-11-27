@@ -9,7 +9,23 @@ layout: base.njk
   </div>
 </header>
 
-<div class="prose">{{ content | safe }}</div>
+<div class="prose">
+  {% set videoEmbed = videoUrl | youtubeEmbedUrl %}
+  {% if videoEmbed %}
+  <iframe
+    class="home-video"
+    src="{{ videoEmbed }}"
+    title="{{ videoTitle or 'YouTube video' }}"
+    width="560"
+    height="315"
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="encrypted-media; picture-in-picture; fullscreen"
+    allowfullscreen>
+  </iframe>
+  {% endif %}
+  {{ content | safe }}
+</div>
 
 <section class="page-section" id="writing" aria-labelledby="blog">
   <h2 id="blog">Blog</h2>

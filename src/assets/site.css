@@ -171,6 +171,16 @@ strong, b, th { font-weight: 600; }
   overflow-wrap: anywhere;
 }
 
+.home-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: .3rem;
+  background: var(--line);
+}
+
 .prose p { margin: .85rem 0 0; }
 .prose > :first-child { margin-top: 0; }
 .prose h2, .prose h3, .prose h4 { margin-top: 1.75rem; }

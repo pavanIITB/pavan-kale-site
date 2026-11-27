@@ -1,0 +1,31 @@
+---
+layout: base.njk
+---
+<section class="hero" aria-labelledby="intro">
+  <div class="hero-copy">
+    <h1 id="intro">{{ site.name }}</h1>
+    <div class="bio">{{ content | safe }}</div>
+    <div class="hero-actions">
+      <a class="button" href="{{ '/schedule/' | url }}">Schedule a call</a>
+      <a class="text-link" href="#writing">Read my writing</a>
+    </div>
+  </div>
+  <div class="hero-portrait">
+    <img src="{{ '/assets/pavan-kale.jpg' | url }}" width="800" height="800" alt="Pavan Kale">
+  </div>
+</section>
+
+<section class="home-writing" aria-labelledby="writing">
+  <h2 id="writing">Writing</h2>
+  <div>
+    {% set posts = collections.posts.slice(0, 3) %}
+    {% if posts.length %}
+      {% include "post-list.njk" %}
+    {% elif site.linkedWriting.length %}
+      {% include "linked-writing.njk" %}
+    {% else %}
+      <p class="muted">I’ll share new posts here as I write them.</p>
+    {% endif %}
+    <a class="text-link archive-link" href="{{ '/writing/' | url }}">View all writing</a>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description or site.description }}">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+  <link rel="icon" href="{{ '/assets/favicon.svg' | url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/site.css' | url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a class="site-name" href="{{ '/' | url }}">{{ site.name }}</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="{{ '/' | url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a></li>
+          <li><a href="{{ '/writing/' | url }}"{% if page.url == '/writing/' %} aria-current="page"{% elif section == 'writing' %} aria-current="location"{% endif %}>Writing</a></li>
+          <li><a href="{{ '/schedule/' | url }}"{% if page.url == '/schedule/' %} aria-current="page"{% endif %}>Schedule a call</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container site-main" id="main">
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>{{ site.name }}</span>
+      {% if site.links.length %}
+      <ul class="link-list">
+        {% for link in site.links %}
+        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </footer>
+</body>
+</html>

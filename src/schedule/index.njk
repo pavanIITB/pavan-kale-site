@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: Schedule a call
+description: Book a discovery call with Pavan Kale on Topmate.
+---
+<section class="page-heading" aria-labelledby="schedule">
+  <h1 id="schedule">Schedule a call</h1>
+  {% if site.booking.callUrl %}
+  <p class="lede">Pick a time that works for you on Topmate.</p>
+  {% else %}
+  <p class="lede">Online booking isn’t available yet.</p>
+  {% endif %}
+</section>
+{% if site.booking.callUrl %}
+<section class="page-section booking" aria-labelledby="discovery">
+  <div>
+    <h2 id="discovery">Discovery call</h2>
+    <p class="muted">15 minutes · Video call · Free</p>
+  </div>
+  <a class="button" href="{{ site.booking.callUrl }}">Book on Topmate</a>
+</section>
+{% endif %}
+{% if site.booking.profileUrl %}
+<p class="other-booking"><a class="text-link" href="{{ site.booking.profileUrl }}">See all Topmate sessions</a></p>
+{% endif %}

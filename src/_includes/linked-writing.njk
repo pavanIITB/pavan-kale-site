@@ -1,0 +1,11 @@
+<ul class="post-list">
+  {% for post in site.linkedWriting %}
+  <li>
+    <div>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </div>
+    <span class="post-source">{{ post.label }}</span>
+  </li>
+  {% endfor %}
+</ul>

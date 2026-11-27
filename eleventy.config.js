@@ -8,16 +8,14 @@ const readableDate = new Intl.DateTimeFormat("en-GB", {
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({
-    "node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2": "assets/instrument-serif.woff2",
-    "node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2": "assets/instrument-sans.woff2",
-    "node_modules/@fontsource/instrument-serif/LICENSE": "assets/instrument-serif-license.txt",
-    "node_modules/@fontsource-variable/instrument-sans/LICENSE": "assets/instrument-sans-license.txt"
+    "node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2": "assets/inter.woff2",
+    "node_modules/@fontsource-variable/inter/LICENSE": "assets/inter-license.txt"
   });
   eleventyConfig.setNunjucksEnvironmentOptions({ autoescape: true });
 
   eleventyConfig.addCollection("posts", (collection) =>
     collection
-      .getFilteredByGlob("src/writing/*.md")
+      .getFilteredByGlob("src/blog/*.md")
       .filter((post) => !post.data.draft)
       .reverse()
   );

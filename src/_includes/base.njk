@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ description or site.description }}">
-  <meta name="theme-color" content="#f7f6f2">
+  <meta name="theme-color" content="#ffffff">
   <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
   <link rel="icon" href="{{ '/assets/favicon.svg' | url }}" type="image/svg+xml">
   <link rel="stylesheet" href="{{ '/assets/site.css' | url }}">
@@ -17,7 +17,7 @@
       <nav aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="{{ '/' | url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a></li>
-          <li><a href="{{ '/writing/' | url }}"{% if page.url == '/writing/' %} aria-current="page"{% elif section == 'writing' %} aria-current="location"{% endif %}>Writing</a></li>
+          <li><a href="{{ '/blog/' | url }}"{% if page.url == '/blog/' %} aria-current="page"{% elif section == 'blog' %} aria-current="location"{% endif %}>Blog</a></li>
           <li><a href="{{ '/schedule/' | url }}"{% if page.url == '/schedule/' %} aria-current="page"{% endif %}>Schedule a call</a></li>
         </ul>
       </nav>

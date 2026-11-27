@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Blog
+description: Pavan Kale’s blog about building products and running Sipwise.
+---
+<header class="page-heading">
+  <h1>Blog</h1>
+  <p class="lede">Notes on building products and running Sipwise.</p>
+</header>
+{% set posts = collections.posts %}
+{% if posts.length %}
+  {% include "post-list.njk" %}
+{% else %}
+  <p class="muted">There are no published posts yet.</p>
+{% endif %}
+{% if site.linkedPosts.length %}
+<section class="page-section" aria-labelledby="elsewhere">
+  <h2 id="elsewhere">On LinkedIn</h2>
+  {% include "linked-posts.njk" %}
+</section>
+{% endif %}

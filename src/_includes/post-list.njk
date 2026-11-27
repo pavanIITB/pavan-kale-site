@@ -2,7 +2,7 @@
   {% for post in posts %}
   <li>
     <div>
-      <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+      <p class="post-title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></p>
       {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
     </div>
     <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>

@@ -1,19 +1,19 @@
 # Pavan Kale’s personal site
 
-A static personal site with a homepage, writing archive and Topmate booking page. Eleventy generates the pages from Markdown and templates.
+A static personal site with a homepage, blog and Topmate booking page. Eleventy generates the pages from Markdown and templates.
 
 ## Update the site
 
 - Edit the homepage bio in [src/index.md](src/index.md).
-- Edit your social links, Topmate links and links to published writing elsewhere in [src/_data/site.json](src/_data/site.json).
+- Edit your social links, Topmate links and links to posts published elsewhere in [src/_data/site.json](src/_data/site.json).
 - Replace [src/assets/pavan-kale.jpg](src/assets/pavan-kale.jpg) to update your portrait. The current image is from [your Topmate profile](https://topmate.io/pavan_kale).
 
 ## Publish a post
 
-1. Copy [src/writing/example.md](src/writing/example.md) to a new file in `src/writing/`. Use a short, lowercase, hyphenated file name like `building-a-first-prototype.md`.
+1. Copy [src/blog/example.md](src/blog/example.md) to a new file in `src/blog/`. Use a short, lowercase, hyphenated file name like `building-a-first-prototype.md`.
 2. Set the title, description and date. Write the post underneath the front matter.
 3. Change `draft: true` to `draft: false` when it’s ready. The example remains a draft.
-4. Commit the file to `main`. The Pages workflow updates the homepage, the writing archive and the post’s own URL after each push.
+4. Commit the file to `main`. The Pages workflow updates the homepage, the blog and the post’s own URL after each push.
 
 Keep private drafts on your computer. Files committed to a public GitHub repository are visible in its source, including drafts.
 

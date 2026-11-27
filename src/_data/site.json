@@ -1,6 +1,6 @@
 {
   "name": "Pavan Kale",
-  "description": "Personal website and writing by Pavan Kale.",
+  "description": "Pavan Kale’s personal website and blog.",
   "links": [
     { "label": "LinkedIn", "url": "https://in.linkedin.com/in/kalepavan" },
     { "label": "Instagram", "url": "https://www.instagram.com/wisemansips/" }
@@ -9,7 +9,7 @@
     "callUrl": "https://topmate.io/pavan_kale/1433697",
     "profileUrl": "https://topmate.io/pavan_kale"
   },
-  "linkedWriting": [
+  "linkedPosts": [
     {
       "title": "What debugging taught me about resilience",
       "description": "On broken builds at IIT Bombay and the mindset I brought to Sipwise.",

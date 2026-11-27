@@ -1,6 +1,6 @@
 ---
 title: A post title
-description: A short summary shown in the Writing archive.
+description: A short summary shown in the Blog.
 date: 2026-11-27
 draft: true
 ---

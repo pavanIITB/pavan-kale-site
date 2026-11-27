@@ -12,6 +12,12 @@ layout: base.njk
     {% endif %}
   </header>
   <div class="prose">
+    {% if cover %}
+    <figure class="journey-photo">
+      <img src="{{ cover.image | url }}" width="{{ cover.width }}" height="{{ cover.height }}" alt="{{ cover.alt }}" loading="lazy">
+      <figcaption>{{ cover.caption }}</figcaption>
+    </figure>
+    {% endif %}
     {{ content | safe }}
   </div>
 </article>

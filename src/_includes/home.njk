@@ -4,7 +4,7 @@ layout: base.njk
 <header class="intro">
   <img class="portrait" src="{{ site.portrait | url }}" width="320" height="320" alt="{{ site.name }}">
   <div>
-    <h1>{{ site.name }}</h1>
+    <h1>{{ headline or site.name }}</h1>
     <p class="lede">{{ intro }}</p>
   </div>
 </header>
@@ -12,6 +12,7 @@ layout: base.njk
 <div class="prose">
   {% set videoEmbed = videoUrl | youtubeEmbedUrl %}
   {% if videoEmbed %}
+  {% if videoIntro %}<p class="video-intro">{{ videoIntro }}</p>{% endif %}
   <iframe
     class="home-video"
     src="{{ videoEmbed }}"

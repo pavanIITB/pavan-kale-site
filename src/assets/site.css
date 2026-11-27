@@ -150,6 +150,8 @@ strong, b, th { font-weight: 600; }
   margin-bottom: clamp(2rem, 6vw, 3.2rem);
 }
 
+.intro h1 { font-size: clamp(1.875rem, 5.5vw, 3rem); }
+
 .portrait {
   display: block;
   width: clamp(4.75rem, 17vw, 8.25rem);
@@ -170,6 +172,8 @@ strong, b, th { font-weight: 600; }
   line-height: 1.75;
   overflow-wrap: anywhere;
 }
+
+.prose .video-intro { margin: 0 0 1rem; }
 
 .home-video {
   display: block;

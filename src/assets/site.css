@@ -312,5 +312,6 @@ strong, b, th { font-weight: 600; }
 @media (max-width: 30rem) {
   .container { width: calc(100% - 2.25rem); }
   .nav-list { column-gap: .85rem; }
+  .intro { align-items: start; }
   .post-list li { flex-direction: column; }
 }

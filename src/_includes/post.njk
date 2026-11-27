@@ -5,7 +5,11 @@ layout: base.njk
   <header class="page-heading">
     <a class="text-link back-link" href="{{ '/blog/' | url }}">All posts</a>
     <h1>{{ title }}</h1>
-    <time class="muted" datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>
+    {% if sample %}
+    <p class="post-source post-date">Sample post</p>
+    {% else %}
+    <time class="muted post-date" datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>
+    {% endif %}
   </header>
   <div class="prose">
     {{ content | safe }}

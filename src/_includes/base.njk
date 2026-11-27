@@ -4,16 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ description or site.description }}">
+  {% if sample %}<meta name="robots" content="noindex">{% endif %}
   <meta name="theme-color" content="#ffffff">
   <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
-  <link rel="icon" href="{{ '/assets/favicon.svg' | url }}" type="image/svg+xml">
-  <link rel="stylesheet" href="{{ '/assets/site.css' | url }}?v=3">
+  <link rel="icon" href="{{ site.portrait | url }}" type="image/png">
+  <link rel="apple-touch-icon" href="{{ site.portrait | url }}">
+  {% if pagesOrigin and page.url != '/404.html' %}
+  <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ site.name }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:url" content="{{ pagesOrigin }}{{ page.url | url }}">
+  <meta property="og:type" content="{% if section == 'blog' and page.url != '/blog/' %}article{% else %}website{% endif %}">
+  <meta property="og:image" content="{{ pagesOrigin }}{{ site.portrait | url }}">
+  <meta property="og:image:alt" content="{{ site.name }}">
+  <meta name="twitter:card" content="summary">
+  {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/site.css' | url }}?v=4">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container site-header-inner">
-      <a class="site-name" href="{{ '/' | url }}">{{ site.name }}</a>
+      <a class="site-name" href="{{ '/' | url }}">
+        {% if page.url != '/' %}
+        <img src="{{ site.portrait | url }}" width="24" height="24" alt="">
+        {% endif %}
+        {{ site.name }}
+      </a>
       <nav aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="{{ '/' | url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a></li>

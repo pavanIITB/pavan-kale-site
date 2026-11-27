@@ -5,7 +5,11 @@
       <p class="post-title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></p>
       {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
     </div>
+    {% if post.data.sample %}
+    <span class="post-source">Sample post</span>
+    {% else %}
     <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+    {% endif %}
   </li>
   {% endfor %}
 </ul>

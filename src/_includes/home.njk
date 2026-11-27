@@ -2,11 +2,11 @@
 layout: base.njk
 ---
 <header class="intro">
+  <img class="portrait" src="{{ site.portrait | url }}" width="320" height="320" alt="{{ site.name }}">
   <div>
     <h1>{{ site.name }}</h1>
     <p class="lede">{{ intro }}</p>
   </div>
-  <img class="portrait" src="{{ '/assets/pavan-kale.jpg' | url }}" width="800" height="800" alt="Pavan Kale">
 </header>
 
 <div class="prose">{{ content | safe }}</div>

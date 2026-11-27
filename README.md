@@ -6,7 +6,7 @@ A static personal site with a homepage, blog and Topmate booking page. Eleventy 
 
 - Edit the homepage bio in [src/index.md](src/index.md).
 - Edit your social links, Topmate links and links to posts published elsewhere in [src/_data/site.json](src/_data/site.json).
-- Replace [src/assets/pavan-kale.jpg](src/assets/pavan-kale.jpg) to update your portrait. The current image is from [your Topmate profile](https://topmate.io/pavan_kale).
+- Replace [src/assets/portrait.png](src/assets/portrait.png) to update the site portrait, favicon, and link preview image.
 
 ## Publish a post
 
@@ -14,6 +14,8 @@ A static personal site with a homepage, blog and Topmate booking page. Eleventy 
 2. Set the title, description and date. Write the post underneath the front matter.
 3. Change `draft: true` to `draft: false` when it’s ready. The example remains a draft.
 4. Commit the file to `main`. The Pages workflow updates the homepage, the blog and the post’s own URL after each push.
+
+Sample posts appear in the blog with a sample label and are excluded from search indexing. Remove `sample: true` and set the publication date when replacing sample copy.
 
 Keep private drafts on your computer. Files committed to a public GitHub repository are visible in its source, including drafts.
 
@@ -49,3 +51,18 @@ At the registrar or DNS provider, add these records for the site. Preserve unrel
 | `www` | `CNAME` | `pavaniitb.github.io` |
 
 After GitHub’s DNS check passes, select **Enforce HTTPS** and check both the apex domain and `www`. [GitHub’s custom-domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+
+## Illustrative homepage photos
+
+The following stock photos are from [Unsplash](https://unsplash.com/license).
+
+- [Circuit board](https://images.unsplash.com/photo-1518770660439-4636190af475)
+- [Code on screen](https://images.unsplash.com/photo-1461749280684-dccba630e2f6)
+- [Water in a glass](https://images.unsplash.com/photo-1548839140-29a749e1cf4d)
+- [Water bottle](https://images.unsplash.com/photo-1523362628745-0c100150b504)
+- [Electronics work](https://images.unsplash.com/photo-1581092921461-eab62e97a780)
+- [Warehouse](https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d)
+- [Shared work table](https://images.unsplash.com/photo-1521737711867-e3b97375f902)
+- [Notebook](https://images.unsplash.com/photo-1517842645767-c639042777db)
+- [Sketching](https://images.unsplash.com/photo-1581092160562-40aa08e78837)
+- [Mountain trail](https://images.unsplash.com/photo-1551632811-561732d1e306)

@@ -1,0 +1,13 @@
+:root {
+  --surface: #fffcf8;
+  --ink: #18283b;
+  --muted: #4c5867;
+  --line: #eee3d4;
+  --link: #16509a;
+  --link-hover: #153869;
+}
+
+.nav-list a[aria-current] {
+  text-decoration-color: #c77b24;
+  text-decoration-thickness: 2px;
+}

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ description or site.description }}">
   {% if sample %}<meta name="robots" content="noindex">{% endif %}
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#fffcf8">
   <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
   <link rel="icon" href="{{ site.portrait | url }}" type="image/png">
   <link rel="apple-touch-icon" href="{{ site.portrait | url }}">
@@ -19,6 +19,7 @@
   <meta name="twitter:card" content="summary">
   {% endif %}
   <link rel="stylesheet" href="{{ '/assets/site.css' | url }}?v=4">
+  <link rel="stylesheet" href="{{ '/assets/palette.css' | url }}">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>

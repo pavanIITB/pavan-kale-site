@@ -1,8 +1,16 @@
 @font-face {
-  font-family: Inter;
-  src: url("./inter.woff2") format("woff2");
+  font-family: Figtree;
+  src: url("./figtree.woff2") format("woff2");
   font-style: normal;
-  font-weight: 100 900;
+  font-weight: 300 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Figtree;
+  src: url("./figtree-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300 600;
   font-display: swap;
 }
 
@@ -16,7 +24,8 @@
   --link-hover: #0f2d60;
   background: var(--surface);
   color: var(--ink);
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Figtree, system-ui, sans-serif;
+  font-weight: 300;
   line-height: 1.65;
 }
 
@@ -77,7 +86,7 @@ a:focus-visible {
 
 .site-name {
   color: var(--ink);
-  font-weight: 650;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -108,21 +117,25 @@ a:focus-visible {
   text-decoration: underline;
 }
 
-h1, h2, h3 {
+.nav-list a[aria-current] { font-weight: 500; }
+
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   line-height: 1.2;
   letter-spacing: -.025em;
-  font-weight: 650;
+  font-weight: 500;
 }
 
 h1 {
   font-size: clamp(2.125rem, 6.5vw, 3.5rem);
-  letter-spacing: -.05em;
+  letter-spacing: -.035em;
   text-wrap: balance;
 }
 
 h2 { font-size: clamp(1.2rem, 3vw, 1.45rem); }
 h3 { font-size: 1.0625rem; }
+
+strong, b, th { font-weight: 600; }
 
 .intro {
   display: grid;
@@ -202,7 +215,7 @@ h3 { font-size: 1.0625rem; }
 }
 
 .post-list p { margin: .3rem 0 0; }
-.post-list .post-title { margin: 0; font-weight: 650; }
+.post-list .post-title { margin: 0; font-weight: 500; }
 
 .muted,
 .post-list p,

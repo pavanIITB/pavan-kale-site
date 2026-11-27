@@ -8,8 +8,9 @@ const readableDate = new Intl.DateTimeFormat("en-GB", {
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({
-    "node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2": "assets/inter.woff2",
-    "node_modules/@fontsource-variable/inter/LICENSE": "assets/inter-license.txt"
+    "node_modules/@fontsource-variable/figtree/files/figtree-latin-wght-normal.woff2": "assets/figtree.woff2",
+    "node_modules/@fontsource-variable/figtree/files/figtree-latin-wght-italic.woff2": "assets/figtree-italic.woff2",
+    "node_modules/@fontsource-variable/figtree/LICENSE": "assets/figtree-license.txt"
   });
   eleventyConfig.setNunjucksEnvironmentOptions({ autoescape: true });
 

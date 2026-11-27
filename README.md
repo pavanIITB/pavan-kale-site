@@ -51,11 +51,11 @@ At the registrar or DNS provider, add these records for the site. Preserve unrel
 | `@` | `A` | `185.199.111.153` |
 | `www` | `CNAME` | `pavaniitb.github.io` |
 
-After GitHub’s DNS check passes, select **Enforce HTTPS** and check both the apex domain and `www`. [GitHub’s custom-domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+After GitHub’s DNS check passes, run **Actions → Publish GitHub Pages → Run workflow** on `main` to rebuild the site with the custom domain’s root asset paths and origin. Once the certificate is available, select **Enforce HTTPS** and check both the apex domain and `www`. [GitHub’s custom-domain instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 
 ## Analytics
 
-The site can send page views to an [Umami Cloud](https://cloud.umami.is/) website. Create the website in your account using `pavaniitb.github.io` as the domain. Copy its website ID from **Tracking code** into `umamiWebsiteId` in [src/_data/site.json](src/_data/site.json). GitHub Pages includes the tracker after the next deployment.
+The site can send page views to an [Umami Cloud](https://cloud.umami.is/) website. Use `pavankale.com` as the domain in the Umami website settings once the custom domain is live (update the existing website rather than creating a new one to preserve its analytics history). Copy its website ID from **Tracking code** into `umamiWebsiteId` in [src/_data/site.json](src/_data/site.json). GitHub Pages includes the tracker after the next deployment.
 
 Sign in to Umami and open the website overview to see visitors, views by page, and traffic charts. Open **Insights → UTM** for campaign tags. Leave Share URLs disabled to keep the reports private.
 

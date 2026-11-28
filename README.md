@@ -24,11 +24,12 @@ Keep private drafts on your computer. Files committed to a public GitHub reposit
 
 Use `[text to display](destination)` in any paragraph. The link text can differ from the title of the page it opens.
 
-- On the homepage, use `[our first prototype](blog/building-a-first-prototype/)`.
-- Inside a blog post, use `[our first prototype](../building-a-first-prototype/)` to link to another post.
+- From any page, use `[my student robot](https://pavankale.com/blog/doctor-pi-student-robot/)`.
+- On the homepage, the relative path `[my student robot](blog/doctor-pi-student-robot/)` also works.
+- Inside a blog post, use `[my student robot](../doctor-pi-student-robot/)` to link to another post.
 - For an external site, use `[Sipwise](https://sipwise.store/)`.
 
-The file `src/blog/building-a-first-prototype.md` publishes at `https://pavankale.com/blog/building-a-first-prototype/`. Changing its title leaves that URL in place.
+The file `src/blog/doctor-pi-student-robot.md` publishes at `https://pavankale.com/blog/doctor-pi-student-robot/`. Changing its title leaves that URL in place.
 
 ## Run locally
 

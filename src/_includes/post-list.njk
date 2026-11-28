@@ -3,7 +3,7 @@
   <li>
     <div>
       <p class="post-title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></p>
-      {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+      {% if post.data.description and not compact %}<p>{{ post.data.description }}</p>{% endif %}
     </div>
     {% if post.data.sample %}
     <span class="post-source">Sample post</span>

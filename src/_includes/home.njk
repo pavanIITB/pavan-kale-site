@@ -3,10 +3,8 @@ layout: base.njk
 ---
 <header class="intro">
   <img class="portrait" src="{{ site.portrait | url }}" width="320" height="320" alt="{{ site.name }}">
-  <div>
-    <h1>{{ headline or site.name }}</h1>
-    <p class="lede">{{ intro }}</p>
-  </div>
+  <h1>{{ headline or site.name }}</h1>
+  <p class="lede">{{ intro }}</p>
 </header>
 
 <div class="prose">
@@ -30,8 +28,9 @@ layout: base.njk
 </div>
 
 <section class="page-section" id="writing" aria-labelledby="blog">
-  <h2 id="blog"><a href="{{ '/blog/' | url }}">Blog</a></h2>
-  {% set posts = collections.posts %}
+  <h2 id="blog">Blog</h2>
+  {% set posts = collections.posts.slice(0, 3) %}
+  {% set compact = true %}
   {% if posts.length %}
     {% include "post-list.njk" %}
   {% elif site.linkedPosts.length %}
@@ -39,4 +38,5 @@ layout: base.njk
   {% else %}
     <p class="muted">There are no published posts yet.</p>
   {% endif %}
+  <a class="archive-link" href="{{ '/blog/' | url }}">View all posts</a>
 </section>

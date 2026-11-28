@@ -20,6 +20,16 @@ Sample posts appear in the blog with a sample label and are excluded from search
 
 Keep private drafts on your computer. Files committed to a public GitHub repository are visible in its source, including drafts.
 
+## Add a hyperlink
+
+Use `[text to display](destination)` in any paragraph. The link text can differ from the title of the page it opens.
+
+- On the homepage, use `[our first prototype](blog/building-a-first-prototype/)`.
+- Inside a blog post, use `[our first prototype](../building-a-first-prototype/)` to link to another post.
+- For an external site, use `[Sipwise](https://sipwise.store/)`.
+
+The file `src/blog/building-a-first-prototype.md` publishes at `https://pavankale.com/blog/building-a-first-prototype/`. Changing its title leaves that URL in place.
+
 ## Run locally
 
 Use Node.js 22 or later.

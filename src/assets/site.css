@@ -145,15 +145,18 @@ strong, b, th { font-weight: 600; }
 .intro {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: clamp(1rem, 4vw, 2.5rem);
+  gap: .65rem clamp(1rem, 4vw, 2.5rem);
   align-items: center;
   margin-bottom: clamp(2rem, 6vw, 3.2rem);
 }
 
 .intro h1 { font-size: clamp(1.875rem, 5.5vw, 3rem); }
 
+.intro .lede { margin: 0; }
+
 .portrait {
   display: block;
+  grid-row: span 2;
   width: clamp(4.75rem, 17vw, 8.25rem);
   height: auto;
   border-radius: 50%;
@@ -208,7 +211,7 @@ strong, b, th { font-weight: 600; }
 .journey-photo img {
   display: block;
   width: 100%;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 5 / 4;
   object-fit: cover;
   border-radius: .3rem;
   background: var(--line);
@@ -272,6 +275,7 @@ strong, b, th { font-weight: 600; }
   white-space: nowrap;
 }
 
+.archive-link { display: inline-block; margin-top: 1rem; }
 .back-link { display: inline-block; margin-bottom: .8rem; }
 .post-date { display: block; margin: .7rem 0 0; }
 
@@ -309,9 +313,36 @@ strong, b, th { font-weight: 600; }
 .site-footer { border-top: 1px solid var(--line); }
 .footer-inner { color: var(--muted); font-size: .9375rem; }
 
-@media (max-width: 30rem) {
+@media (max-width: 36rem) {
   .container { width: calc(100% - 2.25rem); }
-  .nav-list { column-gap: .85rem; }
-  .intro { align-items: start; }
+  .site-main { padding-block: 1.8rem 3rem; }
+
+  .site-header-home .site-name { display: none; }
+  .site-header-inner {
+    min-height: 0;
+    padding-block: .25rem;
+    gap: 0 1rem;
+  }
+  .nav-list { gap: 0 1.2rem; }
+  .nav-list a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    white-space: nowrap;
+  }
+
+  .intro {
+    gap: .65rem .85rem;
+    margin-bottom: 1.6rem;
+  }
+  .intro h1 { font-size: clamp(1.65rem, 6.5vw, 2.2rem); }
+  .intro .portrait {
+    grid-row: auto;
+    width: clamp(3.5rem, 16vw, 4.5rem);
+  }
+  .intro .lede { grid-column: 1 / -1; }
+
+  .prose { line-height: 1.65; }
+  .journey-photo { margin-block: 1rem 1.45rem; }
   .post-list li { flex-direction: column; }
 }

@@ -18,7 +18,7 @@
   <meta property="og:image:alt" content="{{ site.name }}">
   <meta name="twitter:card" content="summary">
   {% endif %}
-  <link rel="stylesheet" href="{{ '/assets/site.css' | url }}?v=8">
+  <link rel="stylesheet" href="{{ '/assets/site.css' | url }}?v=9">
   <link rel="stylesheet" href="{{ '/assets/palette.css' | url }}">
   {% if site.umamiWebsiteId and pagesHostname %}
   <script defer
@@ -31,7 +31,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header class="site-header{% if page.url == '/' %} site-header-home{% endif %}">
     <div class="container site-header-inner">
       <a class="site-name" href="{{ '/' | url }}">
         {% if page.url != '/' %}

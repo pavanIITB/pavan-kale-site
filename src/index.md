@@ -2,9 +2,9 @@
 layout: home.njk
 description: Pavan Kale, founder of Sipwise. From building robots at IIT Bombay to shipping smart bottles.
 headline: Hi there, I’m Pavan Kale.
-intro: Thanks for stopping by. I’m the founder and CEO of Sipwise, where we build smart bottles that remind people to drink water. Before Sipwise, I spent much of my time at IIT Bombay learning how to make things work outside the lab.
+intro: Thanks for stopping by. I’m the founder and CEO of Sipwise.
 videoIntro: >-
-  I’m interested in the decisions founders make before they know how things will turn out. The documentary below follows Steve Jobs through Apple, NeXT, and Pixar. After the film, I’ve collected some of my own stories from student robotics, early prototypes, and building Sipwise.
+  Before Sipwise, I built robots at IIT Bombay. These days, we build smart bottles that remind people to drink water. I like founder stories that show how people make decisions before they know how things will turn out. The documentary below follows Steve Jobs through Apple, NeXT, and Pixar.
 videoUrl: https://www.youtube.com/watch?v=s4pVFLUlx8g
 videoTitle: History of Steve Jobs (Full Documentary)
 ---
@@ -28,16 +28,6 @@ It was also where I learned [how to sit with a stubborn bug](blog/what-debugging
 
 Later I worked on controls with Team AeRoVe at IIT Bombay. For the [Barcelona Smart Drone Challenge](blog/aerove-student-flight-projects/), we built trainer aircraft, went through design reviews, and did outdoor tests before the pandemic interrupted the event. A different kind of constraint showed up in the [Flipkart GRiD indoor drone project](blog/flipkart-grid-indoor-drone/). Inside a building there is no reliable GPS position, so our team had to establish what the aircraft could see and what the simulation could actually tell us. We qualified for the national final. I remember the work of making it to that milestone as much as the milestone itself.
 
-<figure class="journey-photo">
-  <img src="assets/portfolio/trainer-in-flight.jpg" width="788" height="530" loading="lazy" alt="A student-built trainer aircraft flying above an outdoor test field">
-  <figcaption>A Team AeRoVe trainer aircraft during outdoor testing</figcaption>
-</figure>
-
-<figure class="journey-photo">
-  <img src="assets/portfolio/indoor-drone.jpg" width="1192" height="864" loading="lazy" alt="A CAD rendering of the underside of an indoor drone">
-  <figcaption>A design rendering from the Flipkart GRiD indoor drone project</figcaption>
-</figure>
-
 ## Finding a problem worth solving
 
 [Sipwise](https://sipwise.store/) began with a full water bottle next to me and a simple habit I kept missing. I’d sit down to work and go hours without taking a sip. The bottle and the water were both within reach. What I was missing was a cue that would reach me while I was paying attention to something else. [Starting with that everyday frustration](blog/starting-with-a-personal-problem/) gave me a clearer question to work on.
@@ -45,11 +35,6 @@ Later I worked on controls with Team AeRoVe at IIT Bombay. For the [Barcelona Sm
 The idea was to put the reminder on the bottle itself. I was interested in [where a reminder fits into someone’s day](blog/designing-for-a-daily-habit/). If the cue is well placed, the next step takes a few seconds. If you have to pull out a phone, open an app, and find the bottle, you’ve written a small task into somebody’s day.
 
 When I tried apps or alarms, I could dismiss them and stay focused on the work. By the time I noticed the bottle again, I’d already forgotten the reminder. The opportunity was in that short gap between seeing a cue and doing something with it. A light on the bottle was a way to put both steps in one place. It sounds like an obvious detail now, which is usually a sign that a problem has become easier to describe.
-
-<figure class="journey-photo">
-  <img src="assets/journey/water.webp" width="640" height="420" loading="lazy" alt="Water streaming into a nearly full glass">
-  <figcaption>Pouring a glass of water</figcaption>
-</figure>
 
 That is one reason I find [watching the first use](blog/watching-how-people-use-things/) more revealing than explaining the idea myself. An explanation smooths over the awkward parts. A bottle sitting on an actual desk gives you a better question. Will somebody notice it during the kind of work that made them forget to drink in the first place? A question like that makes it easier to [decide what can wait](blog/choosing-what-to-leave-out/) until you know more.
 
@@ -71,19 +56,9 @@ It took months of testing and adjusting before we [shipped the first finished bo
 
 One thing I kept from the student workshop was a preference for seeing something in use as soon as possible. With a physical product, the enclosure, the electronics, the way it feels in someone’s hand, and the instructions all affect the same experience. It takes real samples to see where those decisions interfere with each other. At the same time, it’s easier to learn from each sample when you know which decision you made differently.
 
-<figure class="journey-photo">
-  <img src="assets/journey/shipping.webp" width="640" height="420" loading="lazy" alt="Rows of shelving and equipment on a warehouse floor">
-  <figcaption>A warehouse floor</figcaption>
-</figure>
-
 ## The work after launch
 
 Once a product leaves your hands, you get a different kind of feedback. Somebody can tell you what happened during their first week, when they were busy or had forgotten the instructions. I think about [what to ask early customers](blog/listening-to-early-customers/) before drawing a conclusion. A request for a new feature can come from something as small as a step that was hard to find.
-
-<figure class="journey-photo">
-  <img src="assets/journey/team.webp" width="640" height="420" loading="lazy" alt="Several people seated around a table with open laptops">
-  <figcaption>A team around a shared table</figcaption>
-</figure>
 
 There’s also a wider question about [what counts as testing the whole product](blog/testing-the-whole-product/). The hardware matters, along with the box it comes in, the first setup, and what happens when someone comes back to it after a few days. [Turning a comment into a small test](blog/turning-feedback-into-a-test/) helps make that work specific. If several people get stuck in the same place, there’s a useful experiment to run before deciding what to build next.
 
@@ -106,8 +81,3 @@ I used to make time for painting at IIT Bombay too. My old portfolio still has a
 </figure>
 
 I also like the change of attention that comes with being outdoors. When I’ve been turning a problem over for too long, [a little distance can make the next step clearer](blog/stepping-away-from-a-problem/). Sometimes that means coming back knowing exactly what to try. Sometimes it just means being able to see the question clearly again. I want this site to hold more of those observations as I keep building.
-
-<figure class="journey-photo">
-  <img src="assets/journey/hiking.webp" width="640" height="420" loading="lazy" alt="Hikers following a trail toward snow-covered mountains">
-  <figcaption>A trail through the mountains</figcaption>
-</figure>
